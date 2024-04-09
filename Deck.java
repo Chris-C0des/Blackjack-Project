@@ -11,8 +11,10 @@ public class Deck extends Actor
 {
     private Card[] card;
     private int numOfCards;
+    int current;
     
     public Deck(int numOfDecks){
+        current = 0;
         numOfCards = numOfDecks*52;
         card = new Card[numOfCards];
         int index = 0;
@@ -39,6 +41,18 @@ public class Deck extends Actor
             card[swapIndex] = temp;
         }
     }
+    
+    public void draw(){
+        //deck[current]; use this to make a new face up card.
+        // if (deck[current].getRank() == Rank.JACK || Rank.KING || Rank.QUEEN)
+        // if the rank is Jack, queen, or king
+        //      counter+=10
+        // else if the rank is ace
+        //      counter += 11 or 1
+        //else
+        //  counter += the rank of the current
+        
+    }
 
     
     
@@ -48,6 +62,16 @@ public class Deck extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        /*
+        while counter < 21{
+            draw();
+        }
+        if (counter == 21){
+            display "You Win"
+        }
+        else if (counter > 21){
+            display "You Lose"
+        }
+        */
     }
 }

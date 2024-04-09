@@ -44,7 +44,7 @@ public class Card extends Actor
         }
         if (isFaceUp){
             show();
-        }else{
+        } else {
             hide();
         }
         setImage(backImage);
